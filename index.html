@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dairy Queen Feedback</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+text-align:center;
+padding:40px;
+}
+
+.container{
+background:white;
+max-width:600px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#d71920;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+select, textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:20px;
+background:#d71920;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+#thankyou{
+display:none;
+color:green;
+font-size:20px;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dairy Queen Customer Feedback</h1>
+
+<p>
+Before answering this feedback form, please enjoy your  
+<b>FREE Ice Cream Cone 🍦</b>.  
+Your feedback helps us improve our service.
+</p>
+
+<form id="feedbackForm">
+
+<label>Overall Experience</label>
+<select required>
+<option value="">Select Rating</option>
+<option>1 - Very Poor</option>
+<option>2 - Poor</option>
+<option>3 - Good</option>
+<option>4 - Very Good</option>
+<option>5 - Excellent</option>
+</select>
+
+<label>Ice Cream Taste</label>
+<select required>
+<option value="">Select Rating</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+<label>Service Quality</label>
+<select required>
+<option value="">Select Rating</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+<label>Store Cleanliness</label>
+<select required>
+<option value="">Select Rating</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+<label>Would you recommend Dairy Queen?</label>
+<select required>
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<label>Comments or Suggestions</label>
+<textarea rows="4"></textarea>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+
+<div id="thankyou">
+🎉 Thank you for your feedback!  
+We hope you enjoyed your FREE Dairy Queen Ice Cream Cone 🍦
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("feedbackForm").addEventListener("submit",function(event){
+
+event.preventDefault();
+
+document.getElementById("feedbackForm").style.display="none";
+document.getElementById("thankyou").style.display="block";
+
+});
+
+</script>
+
+</body>
+</html>
